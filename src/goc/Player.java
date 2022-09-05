@@ -2,12 +2,13 @@ package goc;
 
 public class Player {
     private String name;
-    private int idPlayer;
+    private String idPlayer;
     private int payment;
 
-    public Player(String name,  int payment){
+    public Player(String name,  int payment, String pid){
         this.name = name;
         this.payment = payment;
+        this.idPlayer = pid;
     }
 
     public String getName() {
@@ -18,19 +19,19 @@ public class Player {
         this.name = name;
     }
 
-    public int getIdPlayer() {
-        return idPlayer;
-    }
-
-    public void setIdPlayer(int idPlayer) {
-        this.idPlayer = idPlayer;
-    }
-
     public int getPayment() {
         return payment;
     }
 
     public void setPayment(int payment) {
         this.payment = payment;
+    }
+
+    public void genratePlayer(){
+        if(this.idPlayer != ""){
+            System.out.println(this.name + " your payment is " + this.payment + " " + this.idPlayer);
+            return;
+        }
+        System.out.println("Can not generate player");
     }
 }
