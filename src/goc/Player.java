@@ -2,10 +2,10 @@ package goc;
 
 public class Player {
     private String name;
-    private String idPlayer;
+    private PlayerId idPlayer;
     private int payment;
 
-    public Player(String name,  int payment, String pid){
+    public Player(String name,  int payment, PlayerId pid){
         this.name = name;
         this.payment = payment;
         this.idPlayer = pid;
@@ -28,8 +28,8 @@ public class Player {
     }
 
     public void genratePlayer(){
-        if(this.idPlayer != ""){
-            System.out.println(this.name + " your payment is " + this.payment);
+        if(this.idPlayer.getPlayerId() != ""){
+            System.out.println("Ok " + this.name + " your payment is " + this.payment + ". Your id is: " + this.idPlayer.getPlayerId());
             return;
         }
         System.out.println("Can not generate player");

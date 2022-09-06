@@ -18,8 +18,8 @@ public class GameOfChance {
         System.out.print("Please enter your bet: ");
         int bet = sc.nextInt();
 
-        Player player = new Player("Slobodan",1000, pid.getPlayerId());
+        Player player = new Player("Slobodan",1000, pid);
 
-        System.out.println("Ok " + player.getName() + " your amount is " + player.getPayment() + "\nGooo!!!");
+        player.genratePlayer();
     }
 }
