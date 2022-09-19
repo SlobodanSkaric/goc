@@ -29,7 +29,7 @@ public class Player {
 
     public void genratePlayer(){
         if(this.idPlayer.getPlayerId() != ""){
-            System.out.println("Ok " + this.name + " your payment is " + this.payment + ". Your id is: " + this.idPlayer.getPlayerId());
+            System.out.println("Ok " + this.getName() + " your payment is " + this.getPayment());
             return;
         }
         System.out.println("Can not generate player");
