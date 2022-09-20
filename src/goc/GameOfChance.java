@@ -1,5 +1,6 @@
 package goc;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GameOfChance {
@@ -21,5 +22,11 @@ public class GameOfChance {
         Player player = new Player("Slobodan",1000, pid);
 
         player.genratePlayer();
+
+        PlayerLotoChance pc = new PlayerLotoChance();
+        pc.chance();
+        System.out.println(pc.result());
+
+
     }
 }
